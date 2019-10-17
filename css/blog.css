@@ -52,3 +52,12 @@ a, body {
 .left-side .link-list a {
     font-weight: 700;
 }
+
+.main {
+    color: #454545;
+}
+
+.content-list {
+    margin-right: 30%;
+    background: #fff;
+}
