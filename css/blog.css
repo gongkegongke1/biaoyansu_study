@@ -6,8 +6,8 @@ body {
 .left-side {
     float: left;
     width: 20%;
-
-}
+    position: fixed; /* 相对于浏览器固定  */
+} 
 
 .left-side > * {
     padding: 10px 20px;
@@ -57,7 +57,31 @@ a, body {
     color: #454545;
 }
 
-.content-list {
+.content-list, .paper {
     margin-right: 30%;
     background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.content-list .article,
+.paper {
+    padding: 10px 15px;
+}
+
+.content-list .article .title,
+.paper .title {
+    color: #454545;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.content-list .article > * ,
+.paper > * {
+    margin: 4px 30px;
+}
+
+.content-list .article .status,
+.paper .status {
+    font-size: 13px;
+    color: #ccc;
 }
