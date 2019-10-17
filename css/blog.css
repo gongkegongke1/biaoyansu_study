@@ -1,0 +1,54 @@
+body {
+    line-height: 1.7;
+    background: #454545;
+}
+
+.left-side {
+    float: left;
+    width: 20%;
+
+}
+
+.left-side > * {
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, body {
+    color: #eee;
+}
+
+.main {
+    float: right;
+    width: 80%;
+}
+
+.header .logo {
+    border: #eee 5px solid;
+    padding: 10px 20px;
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.left-side .link-list a,
+.left-side .tag-list .item {
+    display: block;
+    padding: 5px; 
+    color: #888;  
+    -webkit-transition: color 200ms;
+    -o-transition: color 200ms;
+    transition: color 200ms;       
+} 
+
+.left-side .link-list a:hover,
+.left-side .tag-list .item:hover {
+    color: #eee;
+}
+
+.left-side .link-list a {
+    font-weight: 700;
+}
