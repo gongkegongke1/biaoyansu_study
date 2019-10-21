@@ -1,0 +1,86 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.1);
+}
+/* 所有元素的宽度是以border开始算 */
+
+body {
+    font-size: 14px;
+    color: #444;
+}
+
+.container {
+    display: block;
+    max-width: 1080px;
+    margin: 0 auto;
+} 
+/* 设置居中 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear-float:after,
+.clear-float:before {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/* 这个类是为了清除container这个类的浮动，因为浮动会导致container类的height为0 */
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9 {
+    position: relative;
+    min-height: 1px;
+    display: block;
+    float: left;
+}
+/* 设置这些类可以很方便的将一行分割成你想要的列数，比如你想要一行10列，就用col-1这个类 */
+
+.col-1 {
+    width: 10%;
+}
+
+.col-2 {
+    width: 20%;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+.col-4 {
+    width: 40%;
+}
+
+.col-5 {
+    width: 50%;
+}
+
+.col-6 {
+    width: 60%;
+}
+
+.col-7 {
+    width: 70%;
+}
+
+.col-8 {
+    width: 80%;
+}
+
+.col-9 {
+    width: 90%;
+}
