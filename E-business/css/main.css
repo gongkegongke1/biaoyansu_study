@@ -1,7 +1,6 @@
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: rgba(0,0,0,.1);
 }
 /* 所有元素的宽度是以border开始算 */
 
@@ -16,6 +15,13 @@ body {
     margin: 0 auto;
 } 
 /* 设置居中 */
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #666;
+}
 
 .fl {
     float: left;
@@ -83,4 +89,16 @@ body {
 
 .col-9 {
     width: 90%;
+}
+
+.top-nav {
+    background: #eee;
+}
+
+.top-nav .container .item {
+    padding: 10px 20px;
+}
+
+.top-nav .container .item:hover {
+    color: #333;
 }
