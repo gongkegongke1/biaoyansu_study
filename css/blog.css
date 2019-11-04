@@ -85,3 +85,13 @@ a, body {
     font-size: 13px;
     color: #ccc;
 }
+
+.content-list .article .title:hover {
+    color: #888;
+}
+
+#menu-toggle:checked,
+#menu-toggle,
+.menu  {
+    display: none;
+}
