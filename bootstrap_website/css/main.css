@@ -1,0 +1,12 @@
+.navbar-brand {
+    background-image: url(../img/logo.gif);
+    width: 50px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 3.5rem;
+}
+
+/* .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2.5rem;
+} */
