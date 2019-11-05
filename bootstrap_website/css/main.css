@@ -7,6 +7,16 @@
     padding-bottom: 3.5rem;
 }
 
-/* .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 2.5rem;
-} */
+.side-bar .list-group-item {
+    border: 0;
+    border-radius: 3px;
+    margin-top: 3px;
+}
+
+.side-bar .list-group-item.active {
+    background-color: #117e5e;
+}
+
+.main-panel{
+    margin-top: 5px;
+}
