@@ -70,3 +70,11 @@ img {
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
+
+.row.main-panel .col-sm-3 {
+    padding-left: 30px;
+}
+
+.prevent-bad-info {
+    background-color: rgba(0,0,0,0.05);
+}
