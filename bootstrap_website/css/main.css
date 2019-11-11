@@ -13,8 +13,9 @@ img {
     border-radius: 3px;
 }
 
-.container {
-    min-width: 1310px;
+.container-fluid {
+    /* min-width: 1310px; */
+    padding: 0 10%;
 }
 
 .navbar-brand {
@@ -132,7 +133,7 @@ img {
     font-weight: 700;
 }
 
-.container.news-container {
+.container-fluid.news-container {
     margin-top: 16px;
 }
 
@@ -156,4 +157,28 @@ img {
     text-align: center;
     background: #eee;
     color: #495057;
+}
+
+.btn-primary {
+    border-color: #117e5e;
+    background-color: #117e5e;
+    display: inline;
+}
+
+.btn-primary:hover {
+    background-color: #346d5c;
+    border-color: #346d5c;
+}
+
+.container-small {
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.container-small small {
+    font-size: 16px;
+}
+
+.alert-link {
+    color: #007bff;
 }
