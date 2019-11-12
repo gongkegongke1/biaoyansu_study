@@ -193,3 +193,7 @@ img {
     background-color: #346d5c;
     border-color: #346d5c;
 }
+
+a.nav-link {
+    text-align: center;
+}
