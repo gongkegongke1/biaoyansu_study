@@ -182,3 +182,14 @@ img {
 .alert-link {
     color: #007bff;
 }
+
+.btn-outline-secondary {
+    color: azure;
+    background-color: #117e5e;
+    border-color: #117e5e;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #346d5c;
+    border-color: #346d5c;
+}
