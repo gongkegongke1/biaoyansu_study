@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body onload="loadFinished()">
+    <button onclick="demo()">button</button>
+    <button onclick="demo2()">another button</button>
+    <button onclick="demo3()">another another button</button>
+    <button onclick="demo4()">another another another button</button>
+    <button id="btn1">add event listener button</button>
+    <div id="parent">
+        <button id="btn2" onclick="eventBubbling()">event bubbling button</button>
+    </div>
+    <div class="div" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"></div>
+    <div class="div" id="div2"></div>
+    <input type="text" onchange="onChange()" onfocus="onFocus(this)">
+    <p id="pyo">Yo Yo Yo</p>
+    <p>Yo Yo</p>
+    <img src="100w.png">
+    <script>
+        function demo() {
+            alert("hello")
+        }
+
+        function mouseOver(ooj) {
+            ooj.innerHTML = "Hello"
+        }
+        
+        function mouseOut (ooj) {
+            ooj.innerHTML = "World"
+        }
+
+        function onChange () {
+            alert("input changed!")
+        }
+
+        function onFocus (bg) {
+            bg.style.background = "yellow"
+        }
+        
+        function loadFinished () {
+            alert("Page load finished!")
+        }
+
+        function demo2 () {
+            // document.getElementById("pyo").innerHTML = "Yo Yo Yo Yo Yo Yo Yo"
+            document.getElementsByTagName("p")[0].innerHTML = "fuck my life"
+            document.getElementsByTagName("p")[1].innerHTML = "fuck my life too."
+        }
+
+        function demo3 () {
+            document.getElementsByTagName("img")[0].src = "110.png"
+        }
+
+        function demo4 () {
+            document.getElementById("div2").style.background = "blue"
+        }
+
+        var x = document.getElementById("btn1")
+        x.addEventListener("click", hello)
+        x.addEventListener("click", world)
+
+        function hello () {
+            alert("Hello")
+        }
+
+        function world () {
+            alert("World")
+        }
+
+        function eventCapture (event) {
+            alert("captured!")
+        }
+
+        function eventBubbling (event) {
+            alert("Bubbled!");
+            event.stopPropagation();
+        }
+
+        
+        var z = document.getElementById("btn2")
+        var y = document.getElementById("parent")
+        z.addEventListener("click", eventBubbling)
+        y.addEventListener("click", eventCapture)
+
+    </script>
+</body>
+</html>

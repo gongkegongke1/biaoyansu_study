@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="btn2">event bubbling button</button>
+    </div>
+    <a href="https://www.baidu.com">click</a>
+    <script>
+        document.getElementsByTagName("a")[0].addEventListener("click", changeColor)
+        document.getElementById("parent").addEventListener("click", eventCapture)  //true和false决定是用捕获还是冒泡，true是捕获，false是冒泡
+        document.getElementById("btn2").addEventListener("click", eventBubbling)  //这两行代码，谁先写谁后写没有影响，主要看第三个参数是true还是false，根据这个值来决定执行顺序
+        function eventCapture (event) {
+            alert("captured!")
+        }
+
+        function eventBubbling (event) {
+            alert("Bubbled!");
+            // event.stopPropagation();
+        }
+
+        function changeColor (event) {
+            var a = event.type
+            document.getElementsByTagName("a")[0].style.color = "red"
+            if ( a == "click" ) {
+                event.preventDefault()
+                console.log(a)
+            }
+        }
+        // var y = document.getElementById("parent")
+        // y.addEventListener("click", eventCapture)
+    </script>
+</body>
+</html>
