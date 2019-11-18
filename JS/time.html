@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="setTime()">
+    <div id="clock"></div>
+    <script>
+        function setTime() {
+            var date = new Date()
+            var h = date.getHours()
+            var m = date.getMinutes()
+            var s = date.getSeconds()
+            m = checkLessThanTen(m)
+            s = checkLessThanTen(s)
+            document.getElementById("clock").innerHTML = "Now it's" + h + ":" + m + ":" + s + " already"
+            setInterval(function setRefresh() {
+                setTime()
+            },500)
+        }
+
+        function checkLessThanTen(i) {
+            if (i< 10) {
+                return "0" + i
+            }
+            else {
+                return i
+            }
+        } 
+    </script>
+</body>
+</html>
