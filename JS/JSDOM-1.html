@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="changeWord()">
+    <p name="pn">Hello</p>
+    <p name="pn">Hello</p>
+    <p id="pid" name="pn">Hello</p>
+    <div id="divid">
+        <p name="pn">Hello1</p>
+        <p name="pn">Hello2</p>
+        <p name="pn">Hello3</p>
+    </div>
+    
+    <p name="pn">Hello</p>
+    <script>
+       function changeWord() {
+        var a = document.getElementsByName("pn")
+        a[1].innerHTML = "Fuck"
+        a[1].style.color = "#666"
+       }
+
+       function getAndSetAttr() {
+           var a = document.getElementById("pid")
+           a.setAttribute("name", "pnnp")
+           alert(a.getAttribute("name"))
+       }
+
+       function getChildNodes() {
+           var a = document.getElementById("divid")
+           for(i = 0; i < a.childNodes.length; i++) {
+                if(a.childNodes[i].nodeName == "#text" && /\s/.test(a.childNodes[i].nodeValue)) {
+                    a.removeChild(a.childNodes[i]);
+                }
+            }   //去除childNodes中的空白text节点\
+            console.log(a.childNodes)
+            alert(a.childNodes.item(2).innerHTML)
+       }
+       getChildNodes();
+       function createEle() {
+           var a = document.createElement("p")
+           var b = document.createTextNode("Hello4")
+           a.appendChild(b)
+
+           var c = document.getElementById("divid")
+           c.appendChild(a)
+       }
+       createEle();
+
+       function createEle2() {
+           var a = document.createElement("input")
+           a.type = "button"
+           a.value = "按钮"
+
+           var c = document.getElementById("divid").childNodes.item(2)
+           c.parentNode.insertBefore(a,c)  //在Hello3之前插入button按钮
+        
+       }
+       createEle2()
+    </script>
+</body>
+</html>

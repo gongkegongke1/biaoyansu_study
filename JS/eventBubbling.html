@@ -8,20 +8,28 @@
 </head>
 <body>
     <div id="parent">
-        <button id="btn2">event bubbling button</button>
+        <div id="parent2">
+            <button id="btn2">event bubbling button</button>
+        </div>
     </div>
     <a href="https://www.baidu.com">click</a>
     <script>
         document.getElementsByTagName("a")[0].addEventListener("click", changeColor)
         document.getElementById("parent").addEventListener("click", eventCapture)  //true和false决定是用捕获还是冒泡，true是捕获，false是冒泡
+        document.getElementById("parent2").addEventListener("click", eventBubbling2)
         document.getElementById("btn2").addEventListener("click", eventBubbling)  //这两行代码，谁先写谁后写没有影响，主要看第三个参数是true还是false，根据这个值来决定执行顺序
         function eventCapture (event) {
-            alert("captured!")
+            alert("captured!")   
         }
 
         function eventBubbling (event) {
-            alert("Bubbled!");
-            // event.stopPropagation();
+            alert("Bubbled1!");
+            
+        }
+
+        function eventBubbling2 (event) {
+            alert("Bubbled2!");
+            event.stopPropagation();
         }
 
         function changeColor (event) {

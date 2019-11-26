@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="input" type="text">
+    </form>
+    <button id="btn" type="submit" onclick="goTo()">按钮</button>
+</body>
+<script>
+    function goTo() {
+        var a = document.getElementById("input").value
+        if (a == "hello" ) {
+            history.go(-1)
+        } else {
+            alert("wrong input")
+        }
+    }
+</script>
+</html>
