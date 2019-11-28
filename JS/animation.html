@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #me {
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            width: 150px;
+            height: 150px;
+            animation-name: me;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        /* .rectangle {
+            position: relative;
+            background-color: aqua;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            display: block;
+            animation-name: me;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        } */
+        @keyframes me {
+            0% {
+                top: 0px;
+            }
+            50% {
+                top: 250px;
+                width: 180px;
+                height: 100px;
+            }
+            100% {
+                top: 0px;
+            }
+        }
+        
+    </style>
+        <img id="me" src="me.png">
+        <div class="rectangle"></div>
+</body>
+</html>

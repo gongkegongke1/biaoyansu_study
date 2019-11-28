@@ -13,6 +13,11 @@ img {
     border-radius: 3px;
 }
 
+.news-list-item img:hover {
+    transform: scale(1.5);
+    transition: 200ms;
+}
+
 .container-fluid {
     /* min-width: 1310px; */
     padding: 0 10%;
@@ -84,8 +89,8 @@ img {
 }
 
 .prevent-bad-info img {
-    padding-left: 10px;
-    width: 80%;
+    width: 72px;
+    height: 63px;
 }
 
 .prevent-bad-info .info-title,
@@ -196,4 +201,14 @@ img {
 
 a.nav-link {
     text-align: center;
+}
+
+.prevent-bad-info.clearfix .col-sm-4 {
+    padding: 0;
+    margin-left: 21px;
+    margin-top: 9px;
+}
+
+.news-list-item > .row div:hover {
+    z-index: 10;
 }
