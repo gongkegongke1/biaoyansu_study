@@ -16,4 +16,4 @@ function toggle() {
     }
 }
 
-setInterval(toggle, 500)
+setInterval(toggle, 5)
