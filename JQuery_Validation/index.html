@@ -17,7 +17,8 @@
             <form>
                 <div class="input-control">
                     <label>姓名</label>
-                    <input data-rule="pattern:^[a-z0-9]$|min:18|max:100|minlength:2|maxlength:6|numeric:false|required:ture" type="text" class="inputbox">
+                    <!-- <input data-rule="pattern:^[a-z0-9]$|min:18|max:100|minlength:2|maxlength:6|numeric:false|required:ture" type="text" class="inputbox"> -->
+                    <input id="test" data-rule="min:2|max:10" type="text" class="inputbox">
                     <div>姓名输入有误</div>
                 </div>
             </form>
@@ -27,8 +28,9 @@
 
 
 
-    <script src="JS/jQuery.js"></script>
+    <script type="text/javascript" src="JS/jQuery.js"></script>
     <script src="JS/validator.js"></script>
+    <script src="JS/input.js"></script>
     <script src="JS/main.js"></script>
 </body>
 </html>
